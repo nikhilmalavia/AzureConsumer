@@ -1,0 +1,70 @@
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-05-05 10:54:11.894  INFO 21228 --- [  restartedMain] c.e.c.A.AzureEventhubConsumerApplication : No active profile set, falling back to default profiles: default
+2020-05-05 10:54:11.953  INFO 21228 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-05 10:54:12.585  INFO 21228 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-05-05 10:54:12.588  INFO 21228 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-05-05 10:54:12.715  INFO 21228 --- [ taskExecutor-1] c.a.m.eventhubs.EventHubClientBuilder    : connectionId[MF_eca4ac_1588656252714]: Emitting a single connection.
+2020-05-05 10:54:12.797  INFO 21228 --- [ taskExecutor-1] c.a.m.e.i.EventHubConnectionProcessor    : connectionId[sbeventhumdemo.servicebus.windows.net] entityPath[spring-event-hub]: Setting next AMQP channel.
+2020-05-05 10:54:12.814  INFO 21228 --- [ taskExecutor-1] c.a.m.e.i.AmqpReceiveLinkProcessor       : Requesting for a new AmqpReceiveLink from upstream.
+2020-05-05 10:54:12.817  INFO 21228 --- [ taskExecutor-1] c.a.m.e.EventHubConsumerAsyncClient      : connectionId[MF_eca4ac_1588656252714] linkName[0_75ae8b_1588656252807]: Creating receive consumer for partition '0'
+2020-05-05 10:54:12.822  INFO 21228 --- [ taskExecutor-1] c.a.c.a.i.ReactorConnection              : connectionId[MF_eca4ac_1588656252714]: Creating and starting connection to sbeventhumdemo.servicebus.windows.net:443
+2020-05-05 10:54:12.848  INFO 21228 --- [ taskExecutor-1] c.a.c.a.implementation.ReactorExecutor   : connectionId[MF_eca4ac_1588656252714], message[Starting reactor.]
+2020-05-05 10:54:12.855  INFO 21228 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-05 10:54:12.872  INFO 21228 --- [ taskExecutor-1] c.a.c.a.i.AzureTokenManagerProvider      : Creating new token manager for audience[amqp://sbeventhumdemo.servicebus.windows.net/spring-event-hub/ConsumerGroups/$Default/Partitions/0], resource[spring-event-hub/ConsumerGroups/$Default/Partitions/0]
+2020-05-05 10:54:12.877  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ConnectionHandler      : onConnectionInit hostname[sbeventhumdemo.servicebus.windows.net], connectionId[MF_eca4ac_1588656252714]
+2020-05-05 10:54:12.877  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReactorHandler         : connectionId[MF_eca4ac_1588656252714] reactor.onReactorInit
+2020-05-05 10:54:12.881  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ConnectionHandler      : onConnectionLocalOpen hostname[sbeventhumdemo.servicebus.windows.net:443], connectionId[MF_eca4ac_1588656252714], errorCondition[null], errorDescription[null]
+2020-05-05 10:54:12.897  INFO 21228 --- [  restartedMain] c.e.c.A.AzureEventhubConsumerApplication : Started AzureEventhubConsumerApplication in 1.321 seconds (JVM running for 2.052)
+2020-05-05 10:54:13.033  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ConnectionHandler      : onConnectionBound hostname[sbeventhumdemo.servicebus.windows.net], connectionId[MF_eca4ac_1588656252714]
+2020-05-05 10:54:16.951  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ConnectionHandler      : onConnectionRemoteOpen hostname[sbeventhumdemo.servicebus.windows.net:443], connectionId[MF_eca4ac_1588656252714], remoteContainer[978408c0d8334a4aaa1f6adba4761200_G14]
+2020-05-05 10:54:16.952  INFO 21228 --- [       single-1] c.a.c.a.i.handler.SessionHandler         : onSessionRemoteOpen connectionId[MF_eca4ac_1588656252714], entityName[spring-event-hub/ConsumerGroups/$Default/Partitions/0], sessionIncCapacity[0], sessionOutgoingWindow[2147483647]
+2020-05-05 10:54:16.953  INFO 21228 --- [       single-1] c.a.c.a.i.ReactorConnection              : Setting CBS channel.
+2020-05-05 10:54:16.964  INFO 21228 --- [       single-1] c.a.c.a.i.ReactorConnection              : Emitting new response channel. connectionId: MF_eca4ac_1588656252714. entityPath: $cbs. linkName: cbs.
+2020-05-05 10:54:16.964  INFO 21228 --- [       single-1] .a.i.RequestResponseChannel<cbs-session> : connectionId[MF_eca4ac_1588656252714] entityPath[$cbs]: Setting next AMQP channel.
+2020-05-05 10:54:16.980  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReceiveLinkHandler     : onLinkLocalOpen connectionId[MF_eca4ac_1588656252714], linkName[cbs:receiver], localSource[Source{address='$cbs', durable=NONE, expiryPolicy=SESSION_END, timeout=0, dynamic=false, dynamicNodeProperties=null, distributionMode=null, filter=null, defaultOutcome=null, outcomes=null, capabilities=null}]
+2020-05-05 10:54:17.235  INFO 21228 --- [       single-1] c.a.c.a.i.handler.SessionHandler         : onSessionRemoteOpen connectionId[MF_eca4ac_1588656252714], entityName[cbs-session], sessionIncCapacity[0], sessionOutgoingWindow[2147483647]
+2020-05-05 10:54:17.236  INFO 21228 --- [       single-1] c.a.c.a.i.handler.SendLinkHandler        : onLinkRemoteOpen connectionId[MF_eca4ac_1588656252714], linkName[cbs:sender], remoteTarget[Target{address='$cbs', durable=NONE, expiryPolicy=SESSION_END, timeout=0, dynamic=false, dynamicNodeProperties=null, capabilities=null}]
+2020-05-05 10:54:17.236  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReceiveLinkHandler     : onLinkRemoteOpen connectionId[MF_eca4ac_1588656252714], linkName[cbs:receiver], remoteSource[Source{address='$cbs', durable=NONE, expiryPolicy=SESSION_END, timeout=0, dynamic=false, dynamicNodeProperties=null, distributionMode=null, filter=null, defaultOutcome=null, outcomes=null, capabilities=null}]
+2020-05-05 10:54:17.505  INFO 21228 --- [       single-1] c.a.c.a.i.ActiveClientTokenManager       : Scheduling refresh token task. scopes[amqp://sbeventhumdemo.servicebus.windows.net/spring-event-hub/ConsumerGroups/$Default/Partitions/0]
+2020-05-05 10:54:17.519  INFO 21228 --- [       single-1] c.a.m.e.i.AmqpReceiveLinkProcessor       : linkName[0_75ae8b_1588656252807] entityPath[spring-event-hub/ConsumerGroups/$Default/Partitions/0]. Setting next AMQP receive link.
+2020-05-05 10:54:17.521  INFO 21228 --- [       single-1] c.a.m.e.EventHubConsumerAsyncClient      : connectionId[MF_eca4ac_1588656252714] linkName[0_75ae8b_1588656252807]: Creating receive consumer for partition '0'
+2020-05-05 10:54:17.522  INFO 21228 --- [       single-1] c.a.c.a.implementation.ReactorSession    : linkName[0_75ae8b_1588656252807] entityPath[spring-event-hub/ConsumerGroups/$Default/Partitions/0]: Returning existing receive link.
+2020-05-05 10:54:17.522  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReceiveLinkHandler     : onLinkLocalOpen connectionId[MF_eca4ac_1588656252714], linkName[0_75ae8b_1588656252807], localSource[Source{address='spring-event-hub/ConsumerGroups/$Default/Partitions/0', durable=NONE, expiryPolicy=SESSION_END, timeout=0, dynamic=false, dynamicNodeProperties=null, distributionMode=null, filter={apache.org:selector-filter:string=UnknownDescribedType{descriptor=apache.org:selector-filter:string, described=amqp.annotation.x-opt-offset > '-1'}}, defaultOutcome=null, outcomes=null, capabilities=null}]
+2020-05-05 10:54:17.781  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReceiveLinkHandler     : onLinkRemoteOpen connectionId[MF_eca4ac_1588656252714], linkName[0_75ae8b_1588656252807], remoteSource[Source{address='spring-event-hub/ConsumerGroups/$Default/Partitions/0', durable=NONE, expiryPolicy=SESSION_END, timeout=0, dynamic=false, dynamicNodeProperties=null, distributionMode=null, filter={apache.org:selector-filter:string=org.apache.qpid.proton.codec.DecoderImpl$UnknownDescribedType@47636efa}, defaultOutcome=null, outcomes=null, capabilities=null}]
+Consumed events : 1 -> EPS :0
+Consumed events : 732 -> EPS :730
+Consumed events : 3303 -> EPS :2570
+Consumed events : 6498 -> EPS :3194
+Consumed events : 7044 -> EPS :545
+Consumed events : 7048 -> EPS :3
+Consumed events : 7052 -> EPS :3
+Consumed events : 7056 -> EPS :3
+Consumed events : 7060 -> EPS :3
+Consumed events : 7064 -> EPS :3
+Consumed events : 7068 -> EPS :3
+Consumed events : 7072 -> EPS :3
+Consumed events : 7076 -> EPS :3
+2020-05-05 10:54:30.476  INFO 21228 --- [on(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-05-05 10:54:30.481  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.implementation.ReactorSession    : linkName[0_75ae8b_1588656252807] entityPath[spring-event-hub/ConsumerGroups/$Default/Partitions/0]: Complete. Removing receive link.
+2020-05-05 10:54:30.481  INFO 21228 --- [on(7)-127.0.0.1] c.a.m.e.i.AmqpReceiveLinkProcessor       : linkName[0_75ae8b_1588656252807] entityPath[spring-event-hub/ConsumerGroups/$Default/Partitions/0]. Processor is disposed.
+2020-05-05 10:54:30.481  INFO 21228 --- [      elastic-2] c.a.m.e.EventHubConsumerAsyncClient      : linkName[0_75ae8b_1588656252807], partitionId[0], signal[onComplete]: Receiving completed.
+2020-05-05 10:54:30.483  INFO 21228 --- [       single-1] c.a.c.a.i.handler.ReceiveLinkHandler     : onLinkLocalClose connectionId[MF_eca4ac_1588656252714], linkName[0_75ae8b_1588656252807], errorCondition[null], errorDescription[null]
+2020-05-05 10:54:30.483  INFO 21228 --- [on(7)-127.0.0.1] c.a.m.e.i.EventHubConnectionProcessor    : Upstream connection publisher was completed. Terminating processor.
+2020-05-05 10:54:30.484  INFO 21228 --- [on(7)-127.0.0.1] c.a.m.e.i.EventHubReactorAmqpConnection  : connectionId[MF_eca4ac_1588656252714]: Disposing of connection.
+2020-05-05 10:54:30.485  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.i.ReactorConnection              : connectionId[MF_eca4ac_1588656252714]: Disposing of ReactorConnection.
+2020-05-05 10:54:30.485  INFO 21228 --- [on(7)-127.0.0.1] c.a.m.e.i.EventHubConnectionProcessor    : Channel is disposed.
+2020-05-05 10:54:30.486  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.i.ReactorConnection              : connectionId[MF_eca4ac_1588656252714]: Removing session 'spring-event-hub/ConsumerGroups/$Default/Partitions/0'
+2020-05-05 10:54:30.486  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.implementation.ReactorSession    : sessionId[spring-event-hub/ConsumerGroups/$Default/Partitions/0]: Disposing of session.
+2020-05-05 10:54:30.486  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.i.ReactorConnection              : connectionId[MF_eca4ac_1588656252714]: Removing session 'cbs-session'
+2020-05-05 10:54:30.487  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.implementation.ReactorSession    : sessionId[cbs-session]: Disposing of session.
+2020-05-05 10:54:30.488  INFO 21228 --- [on(7)-127.0.0.1] c.a.c.a.i.AmqpExceptionHandler           : Shutdown received: ReactorExecutor.close() was called., isTransient[false], initiatedByClient[true]
+2020-05-05 10:54:30.508  INFO 21228 --- [       single-1] c.a.c.a.implementation.ReactorExecutor   : connectionId[MF_eca4ac_1588656252714], message[Processing all pending tasks and closing old reactor.]
+2020-05-05 10:54:30.512  INFO 21228 --- [on(7)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
+2020-05-05 10:54:30.512  INFO 21228 --- [       single-1] c.a.c.a.implementation.ReactorExecutor   : connectionId[MF_eca4ac_1588656252714], message[Stopping the reactor because thread was interrupted or the reactor has no more events to process.]
